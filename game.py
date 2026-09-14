@@ -1,6 +1,6 @@
 from goblin import Goblin
 from hero import Hero
-
+from equipment import Equipment
 ARENA_NAME = "The Steel Cage"
 
 
@@ -15,7 +15,8 @@ def main():
     goblin2 = Goblin("Gobsmacker")
 
     hero = Hero("Slunges", "mage")
-
+    armor = Equipment("shield", "def", 5)
+    armor.add(hero)
     print(f"{goblin.name} enters the arena with {goblin.health} health.")
     print(f"{goblin2.name} enters the arena with {goblin2.health} health.")
     print(f"But {hero.name} answers the call!")

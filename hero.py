@@ -3,6 +3,7 @@ class Hero:
     """The hero blueprint will be implemented later in the project."""
     def __init__(self, name, hero_role):
         self.name = name
+        self.armor = 0
         self.hero_role = hero_role
         if hero_role == "barbarian":
             self.health = 100
@@ -22,7 +23,7 @@ class Hero:
         return random.randint(1,self.attack_power)
 
     def take_damage(self, damage):
-        self.health=max(0, self.health - damage)
+        self.health=max(0, self.health - max(0, damage-self.armor))
         print(f"{self.name} takes {damage} damage. Health: {self.health}")
 
     def is_alive(self):
