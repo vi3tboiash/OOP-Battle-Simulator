@@ -7,6 +7,7 @@ class Hero:
         self.equipAmt = 0
         self.equipList = []
         self.hero_role = hero_role
+        # defining how hero_role changes your hero
         if hero_role == "barbarian":
             self.maxHP = 100
             self.attack_power = 25
