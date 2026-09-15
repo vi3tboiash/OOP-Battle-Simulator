@@ -4,16 +4,16 @@ class Equipment:
             self.type = Type
             self.power = power
 
-    def add(self, entity):
-        if self.type != "potion":
-          entity.equipAmt = entity.equipAmt+1
-        if entity.equipAmt > entity.equipMax:
-            print(f"{entity.equipList}")
-            if input("You have max equipment! would you like to trade one out? (y/n)").lower() == "y":
-                slot = input("which slot would you like to switch out?")
-                removed = entity.equipList[slot]
-                entity.equipList[slot]=self.name
-                if removed.type=="armor":
+     def add(self, entity):
+          if self.type != "potion":
+               entity.equipAmt = entity.equipAmt+1
+          if entity.equipAmt > entity.equipMax:
+               print(f"{entity.equipList}")
+          if input("You have max equipment! would you like to trade one out? (y/n)").lower() == "y":
+               slot = input("which slot would you like to switch out?")
+               removed = entity.equipList[slot]
+               entity.equipList[slot]=self.name
+               if removed.type=="armor":
                     entity.armor= entity.armor-removed.power
                 elif removed.type=="atk":
                      entity.attack = entity.attack-removed.power*2
