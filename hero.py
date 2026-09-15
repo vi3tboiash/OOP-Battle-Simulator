@@ -14,7 +14,7 @@ class Hero:
         elif hero_role == "mage":
             self.maxHP = 65
             self.attack_power = 40
-            self.equipMax = 2
+            self.equipMax = 5
         elif hero_role == "knight":
             self.maxHP = 150
             self.attack_power = 10
@@ -34,3 +34,4 @@ class Hero:
 
     def is_alive(self):
         return self.health > 0
+
