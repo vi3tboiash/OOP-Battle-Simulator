@@ -5,7 +5,7 @@ class Hero:
         self.name = name
         self.armor = 0
         self.equipAmt = 0
-        self.equipList = [0]
+        self.equipList = []
         self.hero_role = hero_role
         if hero_role == "barbarian":
             self.maxHP = 100
