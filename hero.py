@@ -7,6 +7,7 @@ class Hero:
         self.equipAmt = 0
         self.equipList = []
         self.hero_role = hero_role
+        self.money = 0
         # defining how hero_role changes your hero
         if hero_role == "barbarian":
             self.maxHP = 100

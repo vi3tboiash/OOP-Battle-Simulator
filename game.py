@@ -1,6 +1,7 @@
 from goblin import Goblin
 from hero import Hero
 from equipment import Equipment
+from events import Events
 ARENA_NAME = "The Steel Cage"
 
 
@@ -21,7 +22,7 @@ def main():
     potion = Equipment("potion", "potion")
     print(hero.equipList)
     armor.add(hero)
-
+    fight = Events("fight")
     print(f"{goblin.name} enters the arena with {goblin.health} health.")
     print(f"{goblin2.name} enters the arena with {goblin2.health} health.")
     print(f"But {hero.name} answers the call! with {hero.health} health")
