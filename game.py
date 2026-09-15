@@ -16,10 +16,11 @@ def main():
 
     hero = Hero("Slunges", "mage")
     armor = Equipment("shield", "def", 5)
+    potion = Equipment("potion", "potion", 5)
     armor.add(hero)
     print(f"{goblin.name} enters the arena with {goblin.health} health.")
     print(f"{goblin2.name} enters the arena with {goblin2.health} health.")
-    print(f"But {hero.name} answers the call!")
+    print(f"But {hero.name} answers the call! with {hero.health} health")
     goblin.take_damage(hero.attack())
     hero.take_damage(goblin2.attack())
 if __name__ == "__main__":

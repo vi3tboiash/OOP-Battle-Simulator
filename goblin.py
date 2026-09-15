@@ -6,8 +6,13 @@ class Goblin:
 
     def __init__(self, name):
         self.name = name
-        self.health = 100
+        self.armor = 0
+        self.equipAmt = 0
+        self.maxHP = 100
+        self.health = self.maxHP
         self.attack_power = 15
+        self.equipList = []
+        self.inventory = []
 
     def attack(self):
         """Return a random amount of damage."""
