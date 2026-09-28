@@ -8,6 +8,12 @@ class Boss(Enemy):
         super().__init__(name, maxHP=250, attack_power=15)
         self.prize=0
 
+    
+    def attack(self):
+        damage = super().attack()
+        bonus_damage = 5
+        print(f"{self.name} unleashes a crushing blow!")
+        return damage + bonus_damage
 
     def LegSweep(self, hero):
         """Return a random amount of damage."""
